@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "black",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main class="pt-12">
+      <section
+        class="m-auto w-10/12 h-full bg-sky-500 rounded-tl-xl rounded-tr-xl"
+      >
+        <h1 class="text-8xl text-white font-medium text-center py-11">
+          Тodo list
+        </h1>
+        <div class="w-7/12 m-auto flex flex-col">
+          <h2 class="my-8 font-normal text-4xl text-white">
+            Разместить задачу
+          </h2>
+          <div>
+            <input
+              class="box-border w-full p-2 outline-none mb-8 rounded"
+              type="text"
+              placeholder="Введите названия задачи"
+              id="inputCreate"
+            />
+            <button
+              class="w-full bg-green-500 py-4 font-normal text-base hover:bg-white hover:text-green-500 rounded transition mb-8"
+              id="createTodo"
+            >
+              Разместить задачу
+            </button>
+            <input
+              class="box-border w-full p-2 outline-none mb-8 rounded"
+              type="text"
+              placeholder="Поиск..."
+              id="searchInput"
+            />
+          </div>
+          <div id="list"></div>
+        </div>
+      </section>
+    </main>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
+</html>
