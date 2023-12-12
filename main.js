@@ -113,7 +113,6 @@ function render(filterArr) {
       const findIdx = arrObjects.findIndex((item) => item.data === el.data);
       arrObjects.splice(findIdx, 1);
       document.getElementById(`delBtn${idx + 1}`).remove();
-      console.log(arrObjects);
       render();
     };
   });
